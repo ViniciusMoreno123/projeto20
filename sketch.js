@@ -41,6 +41,7 @@ function setup() {
 		}
 
     chao = Bodies.rectangle(200,560,400,20,plane_options) ;
+	World.add(world,chao);
 	bloco1 = Bodies.circle(220,20,20,bloco1_options);
 	World.add(world,bloco1)
 	bloco2 =Bodies.rectangle(110,50,40,20,bloco2_options);
@@ -57,6 +58,7 @@ function draw() {
   background(0);
   Engine.update(engine);
   drawSprites();
+  
  
   rect(chao.position.x,chao.position.y,1210,20);
   ellipse(bloco1.position.x,bloco1.position.y,20,20);
